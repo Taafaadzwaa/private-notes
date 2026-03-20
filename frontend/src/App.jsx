@@ -6,7 +6,7 @@ import logo from './assets/logo.jpg';
 import dyk1 from './assets/dyk1.jpg';
 import dyk2 from './assets/dyk2.jpg';
 import dyk3 from './assets/dyk3.jpg';
-import dyk4 from './assets/dyk4.jpg';
+//import dyk4 from './assets/dyk4.jpg';
 
 function App() {
   const [session, setSession] = useState(null);
@@ -220,8 +220,8 @@ function App() {
         <div className="dyk-grid">
           {[{img: dyk1, text: "Writing your thoughts down improves memory and comprehension."},
             {img: dyk2, text: "Journaling can reduce stress and boost mental clarity."},
-            {img: dyk3, text: "Writing daily helps track your personal growth over time."},
-            {img: dyk4, text: "Recording ideas often sparks creativity and new insights."}]
+            {img: dyk3, text: "Writing daily helps track your personal growth over time."}]
+            //{img: dyk4, text: "Recording ideas often sparks creativity and new insights."}]
             .map((item, idx) => (
               <div key={idx} className="dyk-card">
                 <img src={item.img} alt={`DYK${idx+1}`} />
