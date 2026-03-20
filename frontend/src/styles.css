@@ -1,0 +1,244 @@
+/* styles.css */
+
+/* Theme colors */
+:root {
+  --purple: #6b46c1;
+  --yellow: #f6e05e;
+  --white: #ffffff;
+  --light-purple: #f3ebff;
+  --dark-purple: #553c9a;
+  --light-yellow: #fff9db;
+}
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--light-purple);
+  color: var(--purple);
+}
+
+/* Centered login page */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.login-container img.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.login-container h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--purple);
+}
+
+.login-container input {
+  width: 250px;
+  padding: 0.5rem;
+  border: 2px solid var(--purple);
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.login-container input:focus {
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 2px var(--yellow);
+}
+
+.login-container button {
+  width: 250px;
+  padding: 0.7rem;
+  background-color: var(--purple);
+  color: var(--yellow);
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.login-container button:hover {
+  background-color: var(--dark-purple);
+}
+
+/* Toggle link */
+.login-container .toggle-link {
+  color: var(--yellow);
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Notes page */
+.notes-page {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.notes-page header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notes-page header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--purple);
+}
+
+.notes-page header button {
+  color: var(--yellow);
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.add-note {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.add-note input, .add-note textarea {
+  padding: 0.5rem;
+  border: 2px solid var(--purple);
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.add-note input:focus, .add-note textarea:focus {
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 2px var(--yellow);
+}
+
+.add-note button {
+  padding: 0.5rem;
+  background-color: var(--purple);
+  color: var(--yellow);
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-note button:hover {
+  background-color: var(--dark-purple);
+}
+
+/* Individual note card */
+.note-card {
+  background-color: var(--white);
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid var(--yellow);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.note-card h3 {
+  font-weight: bold;
+  color: var(--purple);
+}
+
+.note-card p {
+  color: var(--purple);
+}
+
+.note-card button {
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin-top: 0.3rem;
+}
+
+
+/* Responsive */
+@media (max-width: 640px) {
+  .login-container input, .login-container button {
+    width: 200px;
+  }
+
+  .notes-page {
+    padding: 0.5rem;
+  }
+
+  .add-note input, .add-note textarea, .add-note button {
+    width: 100%;
+  }
+}
+
+.dyk-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.dyk-section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: purple;
+}
+
+.dyk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: start;
+}
+
+.dyk-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 180px;
+}
+
+.dyk-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.dyk-card img:hover {
+  transform: scale(1.1);
+}
+
+.dyk-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--purple);
+  font-weight: bold;
+}
