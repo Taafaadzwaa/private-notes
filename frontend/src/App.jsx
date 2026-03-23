@@ -21,7 +21,7 @@ function App() {
   const [isLogin, setIsLogin] = useState(true);
   const [showAll, setShowAll] = useState(false);
 
-  // Initializing thee sesssion
+  // initializing thee sesssion
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
       setSession(data.session);
