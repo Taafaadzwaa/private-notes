@@ -143,7 +143,6 @@ body {
   background-color: var(--dark-purple);
 }
 
-/* Individual note card */
 .note-card {
   background-color: var(--white);
   padding: 0.8rem;

@@ -140,7 +140,7 @@ function App() {
       </div>
     );
 
-  // Notes page layout: responsive with two columns on desktop
+  // Notes page layout
   return (
     <div className="notes-page">
       <header className="flex justify-between items-center mb-6">
@@ -149,7 +149,7 @@ function App() {
       </header>
 
       <div className="notes-layout">
-        {/* Left Column: so that you can Add/edit a note */}
+        {/* Left Column: so that you can Add or even edit a note */}
         <div className="add-note animate-fade-in">
           <h2>{editingId ? 'Edit Thought' : 'Add a New Thought'}</h2>
           <input
